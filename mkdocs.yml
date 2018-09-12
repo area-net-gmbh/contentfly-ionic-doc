@@ -1,0 +1,37 @@
+site_name: 'Contentfly Ionic SDK'
+site_favicon: 'images/favicon.ico'
+google_analytics:
+  - 'UA-19350837-3'
+  - 'auto'
+theme:
+  name: 'material'
+  language: 'de'
+  feature:
+    tabs: false
+  favicon: 'images/contentfly_favicon.ico'
+  logo: 'images/contentfly_logo.png'
+  palette:
+    primary: 'red'
+    accent: 'red'
+version: '0.9'
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/area-net-gmbh/contentfly-ionic'
+    - type: 'twitter'
+      link: 'https://twitter.com/area_net_gmbh'
+    - type: 'facebook'
+      link: 'https://facebook.com/area.net.gmbh'
+    - type: 'home'
+      link: 'http://www.contentfly-cms.de'
+markdown_extensions:
+  - admonition
+  - codehilite(linenums=true)
+  - toc(permalink=true)
+  - footnotes
+pages:
+- Einführung: 'index.md'
+- Installation: 'installation.md'
+- Synchronisation: 'synchronisation.md'
+- Daten abfragen: 'daten-abfragen.md'
+- Daten ändern: 'daten-aendern.md'
