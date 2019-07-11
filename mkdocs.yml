@@ -32,6 +32,7 @@ markdown_extensions:
 pages:
 - Einführung: 'index.md'
 - Installation: 'installation.md'
+- Authorisierung: 'authorisierung.md'
 - Synchronisation: 'synchronisation.md'
 - Daten abfragen: 'daten-abfragen.md'
 - Daten ändern: 'daten-aendern.md'
