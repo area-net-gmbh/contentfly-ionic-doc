@@ -59,6 +59,13 @@ export class ListPage {
 }
 ```
 
+!!! tip "Datenzugriff im Emulator // Debugging"
+    Um während der (iOS-)Entwicklung auf die SQLite-Datenbank im Simulator zugreifen zu können,
+    empfehlen wir das kostenpflichtige (aktuell 9,90 Euro) Tool [SimPholders](https://simpholders.com/) und den kostenlosen
+    [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+
+
 ### Bilder anzeigen
 
 Bilder aus der Tabelle pim_file können wie folgt angezeigt werden. Es reicht die ID des Bildes zur Ausgabe.

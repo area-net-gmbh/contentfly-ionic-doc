@@ -1,5 +1,9 @@
 # Synchronisation
 
+Das Contentfly SDk synchronisert automatisiert die Datenbankstruktur und
+Datenbankinhalte in eine lokale SQLite-Datenbank. Dateien werden ebenfalls
+in das lokale Dateisystem (_ApplicationData-Directory_) synchronisiert.
+
 ## Grundlegende Einbindung
 
 ### Seiten anlegen
@@ -112,4 +116,34 @@ this.contentflySdk.syncFrom().subscribe(
     
   }
 );
+```
+
+## Anmerkungen
+
+### Bildgrößen
+
+Im Standard werden immer die Originalbilder vom Server synchronisert. Meistens
+reicht aber eine skalierte Ansicht (z.B. 960 Pixel Breite) aus.
+
+Dazu muss im Contentfly CMS die Bildgröße unter "Administration->Bildgrößen"
+angelegt und der verwendete Alias im SDK gesetzt werden.
+
+
+**app/app.component.ts**
+```
+platform.ready().then(() => {
+
+  this.contentflySdk.setDebug(true);
+  this.contentflySdk.setImageDownloadSize('960px');
+    
+  return this.contentflySdk.ready();
+}).then(() => {
+  if(this.contentflySdk.user.exists()){
+    this.rootPage = 'StartPage';
+  }else{
+    this.rootPage = 'LoginPage';
+  }
+  statusBar.styleDefault();
+  splashScreen.hide();
+})
 ```
